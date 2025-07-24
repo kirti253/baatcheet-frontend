@@ -1,10 +1,10 @@
 import Header from "../../components/header";
+import Herosection from "../../components/herosection";
 export default function Home() {
   return (
     <div>
       <Header />
-      <h1>Welcome to My App</h1>
-      <p>This is the home page.</p>
+      <Herosection />
     </div>
   );
 }
