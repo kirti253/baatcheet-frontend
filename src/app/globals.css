@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  /* Base and accent for ambient page-wide gradient */
+  --background-base: #fbfbe4;
+  --background-accent: #f9f9d3;
   --foreground: #171717;
 }
 
@@ -14,13 +16,33 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Keep same brand background in dark mode per design */
+    --background-base: #fbfbe4;
+    --background-accent: #f9f9d3;
+    --foreground: #171717;
   }
 }
 
 body {
-  background: var(--background);
+  /* Solid fallback */
+  background-color: var(--background-base);
+
+  /* Ambient, full-page radial gradients (top and bottom), fixed to viewport */
+  background-image: radial-gradient(
+      1200px 800px at 50% -200px,
+      var(--background-accent) 0%,
+      rgba(249, 249, 211, 0) 70%
+    ),
+    radial-gradient(
+      1200px 800px at 50% 120%,
+      var(--background-accent) 0%,
+      rgba(249, 249, 211, 0) 70%
+    );
+  background-attachment: fixed, fixed;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center bottom;
+  background-size: 140% 100%, 140% 100%;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

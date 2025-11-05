@@ -5,7 +5,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full max-w-7xl mx-auto px-4 pt-9 pb-2">
+    <header className="w-full max-w-7xl mx-auto px-4 pt-8 pb-0">
       <div className="flex items-center justify-between rounded-full bg-[#4A4238] px-6 py-2.5 text-white shadow-sm">
         <h1 className="text-3xl font-extrabold tracking-tight">
           BaatCheet
