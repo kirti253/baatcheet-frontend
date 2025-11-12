@@ -12,6 +12,7 @@ export default function Header() {
           <span className="text-orange-400">.</span>
         </h1>
         <h1>hello</h1>
+        <h1>about me</h1>
         <button
           type="button"
           onClick={() => setIsOpen(true)}
