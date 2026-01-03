@@ -1,5 +1,7 @@
-import VoiceToText from "./components/VoiceToText";
-
 export default function Home() {
-  return <VoiceToText />;
+  return (
+    <div>
+      <h1>hello</h1>
+    </div>
+  );
 }
